@@ -1389,4 +1389,133 @@
 
 
 
-// object = A Coo
+// object = A collection of related properties and/or methods
+//          Can represent real word objects (people, procucts, places)
+//          object = {key:value,
+//                    function()}
+
+
+// const person = {
+//     firstName: "Gio",
+//     lastName: "Gagnidze",
+//     age: "16",
+//     isStudent: true,
+//     sayHello: () => console.log("Hello im Gio Gagnidze")
+
+// }
+
+// const person1 = {
+//     firstName: "gela",
+//     lastName: "gelashvili",
+//     age: "16",
+//     isStudent: true,
+//     sayHello: () => console.log("Im Gelaa")
+    
+// }
+
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.age);
+// console.log(person.isStudent);
+
+// console.log(person1.firstName);
+// console.log(person1.lastName);
+// console.log(person1.age);
+// console.log(person1.isStudent);
+
+// person.sayHello()
+// person1.sayHello()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// this = reference to the object where THIS is udes 
+//        (the object depends on the immediate dontext)
+//        person.name = this.name
+
+
+
+// const person = {
+//     name: "gio",
+//     favFood: "kartofili",
+//     sayHello: function() {
+//         console.log(`hi im ${this.name}`)
+//     }
+// }
+
+// person.sayHello()
+
+
+
+
+
+
+
+
+
+
+
+
+
+// constructor = special method for defining the
+//               properties and methods of objects
+
+
+// function Car(make, model, year, color) {
+//     this.make = make
+//     this.model = model
+//     this.year = year
+//     this.color = color
+//     this.drive = function() {
+//         console.log(`you drive this ${this.model}`);
+//     }
+// }
+
+// const car1 = new Car("Ford", "Mustand", 2024, "red")
+// const car2 = new Car("toyota", "supra", 2000, "pruple")
+
+// console.log(car1.make);
+// console.log(car1.model);
+// console.log(car1.year);
+// console.log(car1.color);
+
+// console.log(car2.make);
+// console.log(car2.model);
+// console.log(car2.year);
+// console.log(car2.color);
+
+
+// car1.drive()
+// car2.drive()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class = (ES6 feature) provides a more structured and cleaner way to
+//         work with objects compared to traditional constructor functions
+//         ex. static keyword, encapsulation, inheritance
