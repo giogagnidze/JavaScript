@@ -1910,3 +1910,261 @@
 //                 [] = to perform array destructuring
 //                 {} = to perform object destructuring
 //                 5 examples
+
+
+// ---------- EXAMPLE 1 ----------
+// SWAP THE VALUE OF TWO VARIABLES
+
+// let a = 1;
+// let b = 2;
+
+// [a, b] = [b, a];
+
+// console.log(a);
+// console.log(b);
+
+
+
+
+// -------- EXAMPLE 2 --------
+// SWAP 2 ELEMENTS IN AN ARRAY 
+
+// const colors = ["red", "green", "blue", "black", "white"];
+
+// [colors[0], colors[4]] = [colors[4], colors[0]]
+
+// console.log(colors);
+
+
+// ---------- EXAMPLE 3 ------------
+// ASSIGN ARRAY ELEMENTS TO VARIABLES
+
+// const colors = ["red", "green", "blue", "black", "white"];
+
+// const [firstColor, secondColod, thirdColor, ...extraColors] = colors
+
+// console.log(firstColor);
+// console.log(secondColod);
+// console.log(thirdColor);
+// console.log(extraColors);
+
+
+
+// ------- EXAMPLE 4 ---------
+// EXTRACT VALUES FROM OBJECTS
+
+// const person1 = {
+//     firstName: "Gio",
+//     lastName: "Gagnidze",
+//     age: 16,
+//     job: "Programmer",
+// }
+// const person2 = {
+//     firstName: "Gela",
+//     lastName: "Gelashvili",
+//     age: 17,
+// }
+
+// const {firstName, lastName, age, job} = person1
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(job);
+
+
+// const {firstName, lastName, age, job="Unemployed"} = person2
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(job);
+
+
+
+
+
+// ----------- EXAMPLE 5 ------------
+//  DESTRUCTURE IN FUCTION PARAMETERS
+
+// function displayPerson({firstName, lastName, age, job}) {
+//     console.log(`name: ${firstName} ${lastName}`);
+//     console.log(`age: ${age}`);
+//     console.log(`job: ${job}`);
+// }
+
+// const person1 = {
+//     firstName: "Gio",
+//     lastName: "Gagnidze",
+//     age: 16,
+//     job: "Programmer",
+// }
+// displayPerson(person1)
+
+
+
+
+
+
+
+
+
+
+
+
+// nested objects = Objects inside of other Objects.
+//                  Allows you to represent more complex data structures
+//                  Child Object is enclosed by a Parent Object
+
+//                  Person{Adress{}, ContactInfo{}}
+//                  ShoppingCart{Keyboard{}, Mouse{}, Monitor{}}
+
+
+// const person = {
+//     fullName: "Gio Gagnidze",
+//     age: 30,
+//     isStudent: true,
+//     hobbie: ["coding", "cooking", "build websites"],
+
+//     address: {
+//         street: "Unknown",
+//         country: "Georgia",
+//     }
+
+// }
+
+// console.log(person.fullName);
+// console.log(person.age);
+// console.log(person.isStudent);
+// console.log(person.hobbie[0]);
+// console.log(person.address.country);
+// console.log(person.address.street);
+
+
+
+// for(const property in person.address){
+//     console.log(person.address[property])   //only nested obj
+// }
+
+
+
+
+
+
+
+
+
+
+// class Person{
+//     constructor(name, age, ...address){
+//         this.name = name
+//         this.age = age
+//         this.address = new Address(...address)
+//     }
+// }
+
+
+// class Address{
+//     constructor(street, city, country){
+//         this.street = street
+//         this.city = city
+//         this.country = country
+//     }
+// }
+
+// const person1 = new Person("Gio", 16, "Unknown", "Rustavi", "Georgia")
+
+// console.log(person1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Date objects = Objects that contain values that represens dates and time
+//                These date objects can be changed and formatted
+//                Date(year, month, day, hour, minete, seconds, ms)
+
+
+// const date = new Date(2024, 0, 1, 2, 3, 4)
+
+// const date = new Date()
+// const year = date.getFullYear()  //2024
+
+// console.log(year);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// closure = A funtion defined inside of another function
+//           the inner function jas access to the variables
+//           and scope of outer function
+//           allow for private variables and state maintenance
+//           used frequently is JS frameworks: React, Vue, Angular
+
+
+// function outer() {
+    
+//     let message = "Hello"
+
+//     function inner(){
+//         console.log(message);
+//     }
+
+//     inner()
+// }
+
+// outer()   //  SCOPE
+
+
+
+
+
+
+
+// function createCounter(){
+//     let count = 0
+
+//     function increment(){
+//         count++
+//         console.log(`Count increase to ${count}`);
+//     }
+    
+//     return {increment:increment}
+// }
+
+// const counter = createCounter()
+
+// counter.increment()
+// counter.increment()
+// counter.increment()
+// counter.increment()
+
+
+
+
+
+
+
