@@ -1519,3 +1519,394 @@
 // class = (ES6 feature) provides a more structured and cleaner way to
 //         work with objects compared to traditional constructor functions
 //         ex. static keyword, encapsulation, inheritance
+
+
+// class Product{
+//     constructor(name, price){
+//         this.name = name
+//         this.price = price
+//     }
+
+//     displayProduct(){
+//         console.log(`product: ${this.name}`);
+//         console.log(`price: $${this.price.toFixed(2)}`);
+//     }
+
+//     calculateTotal(salesTax){
+//         return this.price + (this.price * salesTax)
+//     }
+// }
+
+// const salesTax = 0.05
+
+// const product1 = new Product("Shirt", 19.99)
+// const product2 = new Product("Pants", 22.50)
+// const product3 = new Product("Underwear", 100.00)
+
+// product1.displayProduct()
+// product2.displayProduct()
+// product3.displayProduct()
+
+// const total = product1.calculateTotal(salesTax)
+// console.log(`Total price (with tax): ${total.toFixed(2)}`);
+
+// const total1 = product2.calculateTotal(salesTax)
+// console.log(`Total price (with tax): ${total1.toFixed(2)}`);
+
+// const total2 = product3.calculateTotal(salesTax)
+// console.log(`Total price (with tax): ${total2.toFixed(2)}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// static = keyword that defines properties or methods that belong
+//          to a class itself rather that the objects created
+//          from that class (class owns anything static, not the onjects)
+
+
+// class MathUtil{
+//     static PI = 3.12159
+
+//     static getDiameter(radius){
+//         return radius * 2
+//     }
+
+//     static getcircumferance(radius){
+//         return 2 * this.PI * radius
+//     }
+
+//     static getArea(radius){
+//         return this.PI * radius * radius
+//     }
+// }
+
+
+// console.log(MathUtil.PI);
+// console.log(MathUtil.getDiameter(10));
+// console.log(MathUtil.getcircumferance(10));
+// console.log(MathUtil.getArea(10));
+
+
+
+
+
+
+
+
+
+// class User{
+//     static userCount = 0
+
+//     constructor(username){
+//         this.username = username
+//         User.userCount++
+//     }
+
+
+//     sayHello(){
+//         console.log(`Hello, my username is ${this.username}`);
+        
+//     }
+// }
+
+// const user1 = new User("Gela")
+// const user2 = new User("Geltmeni")
+
+// user1.sayHello()
+// console.log(user1.username);
+// console.log(user2.username);
+// console.log(User.userCount);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// inheritance = allows a new class inherit properties and methods
+//               from an existing class (parent -> child)
+//               helps with code resusablity
+
+
+// class Animal{
+//     alive = true
+
+//     eat(){
+//         console.log(`This ${this.name} is eating`);
+//     }
+//     sleep(){
+//         console.log(`This ${this.name} is sleeping`);
+//     }
+// }
+
+// class Rabbit extends Animal{
+//     name = "rabbit"
+// }
+// class Fish extends Animal{
+//     name = "fish"
+// }
+// class Hawk extends Animal{
+//     name = "hawk"
+// }
+
+// const rabbit = new Rabbit()
+// const fish = new Fish()
+// const hawk = new Hawk()
+
+// rabbit.alive = false
+
+// console.log(rabbit.alive);
+// rabbit.eat()
+// rabbit.sleep()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// super = keyword is used in classes to call the constructor or
+//         access the properties and methods of a parent (superclass)
+//         this = this object
+//         super = the parent
+
+
+// class Animal{
+//     constructor(name, age){
+//         this.name = name
+//         this.age = age
+//     }
+
+
+// }
+// class Rabbit extends Animal{
+//     constructor(name, age, runSpeed){
+//         super(name, age)
+//         this.name = name
+//         this.age = age
+//         this.runSpeed = runSpeed
+//     }
+// }
+// class Fish extends Animal{
+//     constructor(name, age, swimSpeed){
+//         super(name, age)
+//         this.name = name
+//         this.age = age
+//         this.swimSpeed = swimSpeed
+//     }
+// }
+// class Hawk extends Animal{
+//     constructor(name, age, flySpeed){
+//         super(name, age)
+//         this.name = name
+//         this.age = age
+//         this.flySpeed = flySpeed
+//     }
+// }
+
+// const rabbit = new Rabbit("rabbit", 1, 25)
+// const fish = new Fish("fish", 2, 12)
+// const hawk = new Hawk("hawk", 3, 15)
+
+// console.log(rabbit.name);
+// console.log(rabbit.age);
+// console.log(rabbit.runSpeed);
+
+// console.log(fish.name);
+// console.log(fish.age);
+// console.log(fish.swimSpeed);
+
+// console.log(hawk.name);
+// console.log(hawk.age);
+// console.log(hawk.flySpeed);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// getter = special mothod that makes a property readable
+// setter = special method that makea a property weiteable
+
+// validate and modify a value whem reading/writing a property
+
+
+
+// class Rectangle{
+//     constructor(width, height){
+//         this.width = width
+//         this.height = height
+//     }
+
+//     set width(newWidth){
+//         if(newWidth > 0){
+//             this._width = newWidth
+//         }else{
+//             console.error("height must be a postove number")
+//         }
+//     }
+//     set height(newHeight){
+//         if(newHeight > 0){
+//             this._height = newHeight
+//         }else{
+//             console.error("width must be a postove number")
+//         }
+//     }
+
+//     get width(){
+//         return this._width
+//     }
+//     get height(){
+//         return this._height
+//     }_
+
+//     get area(){
+//         return this._width * this._height
+//     }
+// }
+
+// const rectangle = new Rectangle(3, 4)
+
+
+// console.log(rectangle.width);
+// console.log(rectangle.height);
+// console.log(rectangle.area);
+
+
+
+
+
+
+
+
+
+// class Person{
+
+//     constructor(firstName, lastName, age){
+//         this.firstName = firstName
+//         this.lastName = lastName
+//         this.age = age
+//     }
+
+//     set firstName(newFirtstName){
+//         if(typeof newFirtstName === "string" && newFirtstName.length > 0){
+//             this._firstName = newFirtstName
+//         }else{
+//             console.error("First name must be a non-empty string")
+//         }
+//     }
+
+//     set lastName(newLastName){
+//         if(typeof newLastName === "string" && newLastName.length > 0){
+//             this._lastName = newLastName
+//         }else{
+//             console.error("Last name must be a non-empty string")
+//         }
+//     }
+
+//     set age(newAge){
+//         if(typeof newAge === "number" && newAge >= 0 ){
+//             this._age = newAge
+//         }else{
+//             console.error("Age must be a non-negative number")
+//         }
+//     }
+
+
+//     get firstName(){
+//         return this._firstName
+//     }
+
+//     get lastName(){
+//         return this._lastName
+//     }
+
+//     get age(){
+//         return this._age
+//     }
+
+//     get fullName(){
+//         return this._firstName + " " + this._lastName + " " +this._age + " wlis"
+//     }
+// }
+
+// const person = new Person("gio", "gagnidze", 16)
+
+// console.log(person.firstName);
+// console.log(person.lastName);
+// console.log(person.age);
+// console.log(person.fullName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// destructuring = extract values from arrays and objects,
+//                 then assign them to variables in a convenient way
+//                 [] = to perform array destructuring
+//                 {} = to perform object destructuring
+//                 5 examples
