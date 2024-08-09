@@ -2168,3 +2168,20 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// setTimeout() = function in Javascript that allows you to schedule
+//                the execution of a funcion after an amount time (millisecons)
+//                Times are apporximate (vaties based on the wordload of the JavaScript runtime env.)
+
+//                setTimeout(callback, delay)
