@@ -2185,3 +2185,243 @@
 //                Times are apporximate (vaties based on the wordload of the JavaScript runtime env.)
 
 //                setTimeout(callback, delay)
+
+//                clearTimeout(timeoutId) = can cancel a timeout before it triggers
+
+
+
+// function sayHello(params) {
+//     window.alert("hello")
+// }
+
+// setTimeout(sayHello, 3000)
+
+
+
+
+// setTimeout(function(){window.alert("Hello")}, 3000)
+
+
+// setTimeout(() => window.alert("Hello"), 3000)
+
+// const timeoutId = setTimeout(function(){window.alert("Hello")}, 3000)
+
+// clearTimeout(timeoutId)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ES6 Module = An extenral file that contains reusable code 
+//              that can be imported into other JavaScript files.
+//              Wite resuable code for many different apps.
+//              Can contain variables, classes, functions ... and more
+//              introduced as part of ECMAScript 2015 update
+
+//              in script tag in html script tag needs type="module"
+
+
+// import {PI, abc} from './import.js'
+
+// console.log(PI); // output: 3,13
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// synchronous = Excutes line by line consecutively in a sequential manner
+//               code that waits for an operation to complate.
+
+// asynchronous = Allows multiple operations to be performed concurrently without waiitng
+//                Doesn't block the execution flow and allows the program to continue
+//                (I/O operations, newtorek requests, fretching data)
+//                Handled with: Callback, promises, Async/Await
+
+
+
+// function func1(callback){
+//     setTimeout(() => {console.log("Task 1")
+//                       callback()}, 300)
+// }
+
+// function func2(){
+//     console.log("Task 2");
+//     console.log("Task 3");
+//     console.log("Task 4");
+// }
+
+// func1(func2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Error = An object that is created to represent a problem that occurs
+//         occur ofter with user input or establishing a connection
+
+//         try { } = Encloses code that might potentially cause an error
+//         catch = { } Catch and hande any thrown Errors from try { }
+//         finnaly { } = (optional) Always executes. Used mostly for clean up
+//         ex. close files, close connections, release resources
+
+// try{
+//     console.log("Hello");
+//     // NEWTOWK ERRORS
+//     // PROME REJECTION
+//     // SECURITY ERRORS
+// }
+// catch(error){
+//     console.error(error);
+// }
+// finally{
+//     // CLOSE FILES
+//     // CLOSE CONNECTIONS
+//     // RELEASE RESOURCES
+//     console.log("This is always excutes");
+    
+// }
+
+
+// console.log("You have reached the end!");
+
+
+
+
+
+
+
+
+
+
+// try{
+//     const dividend = Number(window.prompt("enter a dividend: "))
+//     const divisor = Number(window.prompt("enter a divisor: "))
+
+//     if(divisor == 0){
+//         throw new Error("You can't devide by zero");
+//     }
+//     if(isNaN(dividend) || isNaN(divisor)){
+//         throw new Error("Values must be a number")
+//     }
+
+//     const result = dividend / divisor
+//     console.log(result);
+// }
+// catch(error){
+//     console.error(error);
+// }
+
+// console.log("You have reached the end!");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DOM = DOCUMENT OBJECT MODEL
+//       Object{} that represent the page you see in the web browser
+//       and provides you with an API to interact with it.
+//       Web browser constructs the DOM when it loads an HTML document,
+//       and structures all the elements in thee-like representation.
+//       JavaScript can access the DOM to dynamically
+//       change the content, structure, and style of a web page
+
+// document.title = "Javascript" // changing title
+// document.body.style.backgroundColor = "hsl(0, 0%, 15%)" //  changing website background color
+
+
+
+// console.log(document);   // output: html document
+
+
+
+// const username = " Gio"
+// const welcomeMsg = document.getElementById("welcome")
+
+// welcomeMsg.textContent += username === "" ? `Guest` : username
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// elements selectors = Methods used to target and munipulate HTML elements 
+//                      They allow you to select one or multiple HTML elements
+//                      from to DOM (Document Object Model)
+
+// 1. document.getElementByID()            // ELEMENTS OR NULL
+// 2. document.getElementsByClassName()    // HTML COLLECTION
+// 3. document.getElementsByTagName()      // HTML COLLECTION
+// 4. document.querySelector()             // ELEMENT OR NULL
+// 5. document.querySelectorAll()          // NODELIST
+
