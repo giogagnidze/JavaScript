@@ -2425,3 +2425,525 @@
 // 4. document.querySelector()             // ELEMENT OR NULL
 // 5. document.querySelectorAll()          // NODELIST
 
+
+// const h1 = document.getElementById("h1")
+// h1.style.backgroundColor = "yellow"
+// h1.style.textAlign = "center"
+
+
+
+
+// const fruits = document.getElementsByClassName("fruits")
+// // fruits[0].style.backgroundColor = "yellow"
+
+// for(let fruit of fruits){
+//     fruit.style.backgroundColor = "yellow"
+// }
+
+
+
+
+
+
+// const h4 = document.getElementsByTagName("h4")
+
+
+
+
+
+// const element = document.querySelector(".fruits")
+
+// element.style.backgroundColor = "yellow"   // only selecting first match
+
+
+
+
+// const fruits = document.querySelectorAll(".fruits")
+// fruits[0].style.backgroundColor = "yellow"  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DOM Navigation = The process of navigaring through the structure 
+//                  of an HTML document using JavaScript
+
+// .firstElementChild
+// .lastElementChild
+// .nextElementSiblint
+// .previousElementSibling
+// .parentElement
+
+
+// ----------- .fitstElementChild -----------
+
+// const element = document.getElementById("fruits")
+// const firstChild = element.firstElementChild;
+// firstChild.style.backgroundColor = "yellow"    // only change bg to first element of fruits
+
+
+
+// const ulElements = document.querySelectorAll("ul")
+
+// ulElements.forEach(ulElements => {
+//     const firstChild = ulElements.firstElementChild
+//     firstChild.style.backgroundColor = "yellow"
+// })  // making all ul first element bg yellow
+
+
+
+
+
+
+
+
+// ----------- .lastElementChild -----------
+
+// const element = document.getElementById("fruits")
+// const lastChild = element.lastElementChild;
+// lastChild.style.backgroundColor = "yellow"   // only change bg to last element of fruits
+
+
+
+
+// ----------- .nextElementSibling -----------
+
+// const element = document.getElementById("apple")
+// const nextSibling = element.nextElementSibling
+// nextSibling.style.backgroundColor = "yellow"  // changing bg next id of apple. here changing orange
+
+
+
+// ----------- .previousElementSibling -----------
+
+// const element = document.getElementById("orange")
+// const nextSibling = element.previousElementSibling
+// nextSibling.style.backgroundColor = "yellow"  // changing bg previous id of orange. here changing apple
+
+
+
+// ----------- .parentElement -----------
+
+
+// const element = document.getElementById("apple")
+// const nextSibling = element.parentElement
+// nextSibling.style.backgroundColor = "yellow"  // changing bg whole parent of apple. here changing apple, orange and banana
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  ADD & CHANGE HTML
+
+
+// -------- EXAMPLE 1 <h1> ---------
+
+// STEP 1 CREATE THE ELEMENT
+// const newH1 = document.createElement("h1")
+
+// STEP 2 ADD ATTRIBUTES/PROPERTIES
+// newH1.textContent = "I Like pizza!"
+// newH1.id = "myH1"
+// newH1.style.color = "red"
+// newH1.style.textAlign = "center"
+
+// STEP 3 APPEND ELEMENT TO DOM
+
+// document.body.prepend(newH1)
+// document.getElementById("box1").append(newH1)
+
+// const box2 = document.getElementById("box2")
+// document.body.insertBefore(newH1, box2)   // appends it before box2
+
+
+// REMOVE HTML ELEMENT
+
+// document.body.removeChild(newH1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// eventListener = Listen for specific events to create invteractive web pages
+//                 events: click, mouseover, mouseout
+//                 .addEventListener(event, arrow fucntion)
+
+
+// const myBox = document.getElementById("myBox")
+// const myButton = document.getElementById("myn")
+
+// myn.addEventListener("click", event =>{
+//     myBox.style.backgroundColor = "red"   //when clicking box background color changing
+//     myBox.textContent = "Ouch"
+// })
+
+// myn.addEventListener("mouseover", event =>{
+//     myBox.style.backgroundColor = "yellow"   
+//     myBox.textContent = "Stop hovering me"
+// })
+
+// myn.addEventListener("mouseout", event =>{
+//     myBox.style.backgroundColor = "green"   
+//     myBox.textContent = "click Me"
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// eventListener = Listen for specific events to create invteractive web pages
+//                 events: keydown, keyup,
+//                 document.addEventListener(event, arrow fucntion)
+
+// const myBox = document.getElementById("myBox");
+// const moveAmount = 10;
+// let x = 0;
+// let y = 0;
+
+// // document.addEventListener("keydown", event => {
+// //     myBox.textContent = "yay"
+// //     myBox.style.backgroundColor = "red"   // when clicking random button on keyboard
+// // })
+
+// // document.addEventListener("keyup", event => {
+// //     myBox.textContent = "Click Me"
+// //     myBox.style.backgroundColor = "green"     // when release button 
+// // })
+
+// document.addEventListener("keydown", event => {
+
+//     if(event.key.startsWith("Arrow")){
+
+//         switch(event.key){
+//             case "ArrowUp":
+//                 y -= moveAmount;
+//                 break
+//             case "ArrowDown":
+//                 y += moveAmount;
+//                 break
+//             case "ArrowLeft":
+//                 x -= moveAmount;
+//                 break
+//             case "ArrowRight":
+//                 x += moveAmount;
+//                 break
+//         }
+
+//         myBox.style.top = `${y}px`
+//         myBox.style.left = `${x}px`
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//      HIDE/SHOW IMAGE
+
+
+// const myButton = document.getElementById("myButton")
+// const myImg = document.getElementById("myImg")
+
+// myButton.addEventListener("click", event =>{
+
+//     if(myImg.style.display === "none"){
+//         myImg.style.display = "block"
+//         myButton.textContent = "Hide"
+//     }else{
+//         myImg.style.display = "none"
+//         myButton.textContent = "Show"
+//     }       
+
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NodeList = Static collection of HTML elements ny (id, class, element)
+//            Can be created by using querySelectorAll()
+//            Similar to an array, but no (map, filter, reduce)
+//            NodeList won't update to automatically reflect changes
+
+
+let buttons = document.querySelectorAll(".myButtons")
+
+// ADD HTML/CSS PROPERTIES
+
+// buttons.forEach(button =>{
+//     button.style.backgroundColor = "green"
+//     button.textContent += "Click Me"
+// })
+
+// buttons.forEach(button => {
+//     button.addEventListener("click", event => {
+//         event.target.style.backgroundColor = "red"
+//     })
+// })
+
+
+// MOUSEOVER + MOUSESET EVENT LISTENER
+// buttons.forEach(button => {
+//     button.addEventListener("mouseover", event => {
+//         event.target.style.backgroundColor = "blue"
+//     })
+// })
+
+
+
+//  ADD AN ELEMENT
+// STEP 1
+
+// const newButton = document.createElement("button")  
+
+// STEP 2
+
+// newButton.textContent = "Button 5"
+// newButton.classList = "myButtons"
+
+// STEP 3
+// document.body.appendChild(newButton)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Callback Hell = Situation in JavaScript where callbacks
+//                 are nested within other callbacks to the 
+//                 deagree where the coed is difficult to read.
+//                 Old pattern to handle asynchronons functions.
+//                 Use Promises + async/await to avoid Callback Hell
+
+
+// function task1(callback){
+//     setTimeout(() => {
+//         console.log("Task 1 complate");
+//         callback();
+//     }, 2000)
+// }
+
+// function task2(callback){
+//     setTimeout(() => {
+//         console.log("Task 2 complate");
+//         callback();
+//     }, 1000)
+// }
+
+// function task3(callback){
+//     setTimeout(() => {
+//         console.log("Task 3 complate");
+//         callback();
+//     }, 3000)
+// }
+
+// function task4(callback){
+//     setTimeout(() => {
+//         console.log("Task 4 complate");
+//         callback();
+//     }, 1500)
+// }
+
+// task1(() =>{
+//     task2(() =>{
+//         task3(() =>{
+//             task4(() =>{
+//                 console.log("All tasks complate");
+//             })
+//         })
+//     })
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Promise = An Object that menages asynchronouns operations.
+//           wrap a Promise Object around {asynchronouns code}
+//           "I promise to return a value"
+//           PENDING -> RESOLVED or REJECTER
+//           new Promise((resolve, reject) => {asynchronouns code})
+
+// DO THERE IN ORDER
+
+// 1. WALK THE DOG
+// 2. CLEAN THE KITCHEN
+// 3. TAKE OUT THE TRASH
+
+
+// function walkDog(){
+//     return new Promise((resolve, reject) =>{
+//         setTimeout(() => {
+//             resolve("You walk the dog");
+//         }, 1500)
+//     })
+// }
+
+// function cleanKitchen(){
+//     return new Promise((resolve, reject) =>{
+//         setTimeout(() => {
+//             resolve("You clean the dog");
+//         }, 2500)
+//     })
+// }
+
+// function takeOutTrash(callback){
+//     return new Promise((resolve, reject) =>{
+//         setTimeout(() => {
+//             resolve("You take out the trash");
+//         }, 500)
+//     })
+// }
+
+// walkDog().then(value =>{console.log(value); return cleanKitchen()})
+//          .then(value =>{console.log(value); return takeOutTrash()})
+//          .then(value =>{console.log(value); console.log("Done")})
+
+
